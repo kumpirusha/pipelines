@@ -53,7 +53,20 @@ Quick start:
 * To start the application copy the project locally and run `docker compose up -d --build`
 * To connect to the database using `docker exec -it postgres_db psql -U myuser -d tw_test`
 
-## Production deployment
+## Production 
+### Reliability
+* Implement retry mechanism on failed API calls (exponential backoff)
+* Move cities out of constants to a config file (such as YAML)
+* Move secrets to ansible-vault or a credentials manager
+* Decouple Extract, Transform and Load steps making each one more fault tolerant
+* Add monitoring and DQ checks on destination tables
+* Run application in CI
+
+### Scalability
+* Run application with cronjobs or a scheduler app (Airflow)
+* Optimise DB and tables (partitioning, indexing, etc.)
+* Switch to apache-parquet for raw data format to improve query performance
+
 ### Cloud-Native Deployment
 * ECS with Fargate/EC2 and images stored in ECR
 * Simple EC2 instance runs
