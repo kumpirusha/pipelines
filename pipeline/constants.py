@@ -7,7 +7,7 @@ CITIES_TO_MONITOR = {
     'Milano,Italy': '',
     'Miami,Florida,US': '',
 }
-CITY_URL = 'https://api.openweathermap.org/geo/1.0/direct'
+CITY_URL = 'http://api.openweathermap.org/geo/1.0/direct'
 WEATHER_URL = 'https://api.openweathermap.org/data/2.5/weather'
 
 OW_KEY = 'f2b5d36fc1f975ace88d6ac18f0d6f42'
