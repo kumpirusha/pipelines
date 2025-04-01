@@ -36,7 +36,7 @@ def main():
         logger.debug('Starting raw weather data processing')
         flat_data = flatten_dict(raw_weather.json())
         clean_tables.append(transform_data(flat_data))
-        logger.debug('Finished raw data procesing')
+        logger.debug('Finished raw data processing')
 
     dt = datetime.utcnow().isoformat()
     # Write raw data to file
